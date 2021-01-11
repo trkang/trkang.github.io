@@ -1,135 +1,170 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns#">
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-126104166-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-126104166-1');
+  </script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <meta charset="utf-8">
+  <title>Wilson Yu</title>
+  <link rel="icon" href="./img/logo2.png">
+
+  <meta property="og:title" content="Wilson" />
+  <meta property="og:image" content="./img/logo.jpg" />
+  <meta property='og:description' content='Interactive Resume' />
+  <meta property="og:url" content="https://wiyu98.github.io" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="./css/main.css">
+  <link rel="stylesheet" type="text/css" href="./css/bokeh.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vivus/0.4.4/vivus.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.paroller.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script type="text/javascript" src="./js/main.js"></script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+  <div class="preloader-background">
+    <div class="preloader-wrapper huge active">
+      <div class="spinner-layer spinner-gold-only">
+        <div class="circle-clipper left">
+          <div class="circle"></div>
         </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
+        <div class="gap-patch">
+          <div class="circle"></div>
+        </div>
+        <div class="circle-clipper right">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="navbar-fixed">
+    <nav class="menu transparent z-depth-0" data-target="top" id="top-navbar">
+      <div class="nav-wrapper">
+        <a href="https://wiyu98.github.io" class="brand-logo title hide-on-med-and-down"><img src="./img/logo-alt.svg"
+            style="height: 25px;" class="enlarge fast" /></a>
+        <a href="#" data-target="mobile-sidenav" class="sidenav-trigger"><i class="fa fa-bars fa-2x"
+            style="color: black;" aria-hidden="true"></i>
+        </a>
+
+        <ul class="right hide-on-med-and-down">
+          <li><a href="#education">EDUCATION</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#skills">SKILLS</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#portfolio">PORTFOLIO</a></li>
         </ul>
-    </header>
-    <!-- End header -->
+      </div>
+    </nav>
+  </div>
 
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Thomas Kang</h1>
-            <h2>UX/UI Designer</h2>
-            <!-- a href="#" class="btn-rounded-white">Download Resume</a -->
-        </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
+  <ul class="sidenav" id="mobile-sidenav">
+    <h4 class="title">
+      &nbsp;
+      <a href="index.html" style="color: black;">
+        Wilson Yu
+      </a>
+    </h4>
+    <h6 class="subtitle">&nbsp;&nbsp;&nbsp;&nbsp;Programmer | Designer</h6><br>
+    <li><a href="#education">EDUCATION</a></li>
+    <li><a href="#experience">EXPERIENCE</a></li>
+    <li><a href="#skills">SKILLS</a></li>
+    <li><a href="#projects">PROJECTS</a></li>
+    <li><a href="#portfolio">PORTFOLIO</a></li>
+    <div class="center-align">
+      <div class="button-row">
+        <a href="https://www.linkedin.com/in/wilson-yu-20253a131/" target="_blank"
+          class="icon-link fa fa-linkedin-square fa-4x"></a>
+        <a href="./files/wilson-yu-resume.pdf" target="_blank" class="icon-link fa fa-file-pdf-o fa-4x"></a>
+        <a href="https://github.com/wiyu98/" target="_blank" class="icon-link fa fa-github-square fa-4x"></a>
+      </div>
     </div>
-    <!-- End #lead -->
-<!--    
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat. Donec
-                        eu vehicula neque. Donec viverra lorem nunc, tempus euismod eros sollicitudin ut. Quisque et tincidunt libero. Donec id pharetra justo. Proin euismod lacinia dolor, eu scelerisque justo tempus pharetra. Vivamus nunc justo, finibus
-                        ut nisl sed, euismod rhoncus nulla. Proin sed magna egestas, egestas ante et, congue eros. In consequat, mauris dapibus tincidunt suscipit, ex libero aliquet diam, at maximus risus enim non leo.
-                    </p>
-                </div>
-            </div>
+  </ul>
+
+  <div id="banner" class="row">
+    <div class="parallax-container full-page banner-padding" id="glance">
+      <div class="container center">
+        <h1 id="banner-name" class="invisible"> WILSON B. YU </h1>
+        <img id="banner-logo" src="./img/logo-alt-animated.svg" style="height:20vh;" class="invisible" />
+        <div class="button-row invisible" id="banner-buttons">
+          <a href="https://www.linkedin.com/in/wilson-yu-20253a131/" target="_blank" class="button light">
+            <i class="fa fa-linkedin-square"></i> &nbsp; LINKEDIN
+          </a>
+          <a href="files/wilson-yu-resume.pdf" target="_blank" class="button light">
+            <i class="fa fa-file-pdf-o"></i> &nbsp; RESUME
+          </a>
+          <a href="https://github.com/wiyu98/" target="_blank" class="button light">
+            <i class="fa fa-github"></i> &nbsp; GITHUB
+          </a>
         </div>
+        <div class="button-row">
+          <a id="banner-down" href="#about"
+            class="icon-link-inv fa fa-angle-double-down fa-4x scale-transition scale-out"></a>
+        </div>
+      </div>
+      <div class="parallax"><img src="img/bokeh.jpg"></div>
     </div>
--->    
-    <!-- End #about -->
+  </div>
 
-<!--
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-
-            <div data-date="September 2015 – September 2016">
-                <h3>Employer Name</h3>
-                <h4>Job Title</h4>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                </p>
-            </div>
-        </div>
+  <div class="section" id="about">
+    <div class="section-title-container">
+      <div class="section-title dark">ABOUT ME</div>
     </div>
--->    
-    <!-- End #experience -->    
-<!--
-    <div id="education">
-        <h2 class="heading">Education</h2>
-        <div class="education-block">
-            <h3>University of California, Irvine </h3>
-            <span class="education-date">Sept 2018 - Dec 2021</span>
-            <h4>Bachelor of Science in Informatics</h4>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-            </p>
-        </div>
--->
-        <!-- End .education-block -->
+    <div class="row vcenter">
+      <div class="col l4 hide-on-med-and-down sr-left">
+        <img src="./img/profile-square.png" style="width:100%" class="circle enlarge" />
+      </div>
+      <div class="col l8 m12 sr-right padded">
+        <h5> Hello! </h5>
+        <p>
+          My name is Wilson. I'm a senior at Carnegie Mellon University studying
+          Information Systems, Human-Computer Interaction, and Statistics. My personal
+          and professional interests include programming, data science, and human behavior.
+          Having grown up drawing way too much, I'm also an avid fan of visual art and design.
+          You can see some of my work <a href="#portfolio">here</a>.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top: 0;">
+    <div class="section-title-container">
+      <div class="section-title dark">CONTACT ME</div>
+    </div>
+    <table class="info-table container sr-left">
+      <tbody>
+        <tr>
+          <td> Email </td>
+          <td> <a href="mailto:yu.wilson.b@gmail.com">yu.wilson.b@gmail.com</a> </td>
+        </tr>
+        <tr>
+          <td> Phone </td>
+          <td> <a href="tel:+1-240-543-9080">240-543-9080</a> </td>
+        </tr>
+        <tr>
+          <td> Location </td>
+          <td>
+            Rockville, MD <br>
+            Pittsburgh, PA
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
   <div class="row" id="education">
     <div class="parallax-container thin">
@@ -140,7 +175,7 @@
           </div>
         </div>
       </div>
-      <div class="parallax"><img src="img/UCI_seal.jpg"></div>
+      <div class="parallax"><img src="img/hamerschlag-hall.jpg"></div>
     </div>
   </div>
 
@@ -190,7 +225,7 @@
     </div>
     <div class="row" id="coursework-list">
       <div class="col l4">
-        <h6><b> Informatics </b></h6>
+        <h6><b> Design & Computer Science </b></h6>
         <ul>
           <li> Interaction Design </li>
           <li> Designing Human-Centered Software</li>
@@ -203,7 +238,7 @@
         </ul>
       </div>
       <div class="col l4">
-        <h6><b> Computer Science </b></h6>
+        <h6><b> Mathematics & Statistics </b></h6>
         <ul>
           <li> Data Mining </li>
           <li> Concepts of Mathematics </li>
@@ -232,137 +267,354 @@
       </div>
     </div>
   </div>
-<!-- end of education, Thanks Wilson -->
 
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
+  <div class="row" id="experience">
+    <div class="parallax-container thin">
+      <div class="section no-pad-bot">
         <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Project Name Here</h3>
-                        <p>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur in iaculis ex. Etiam volutpat laoreet urna. Morbi ut tortor nec nulla commodo malesuada sit amet vel lacus. Fusce eget efficitur libero. Morbi dapibus porta quam laoreet placerat.
-                        </p>
-                        <a href="#">View Project</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
+          <div class="section-title-container">
+            <div class="section-title light">EXPERIENCE</div>
+          </div>
         </div>
+      </div>
+      <div class="parallax"><img src="img/boise.jpg"></div>
     </div>
-    <!-- End #projects -->
+  </div>
 
-    <div id="skills">
-        <h2 class="heading">Skills</h2>
+  <div class="section">
+    <div class="row vcenter">
+      <div class="col l8 m12 sr-right padded">
+        <h4> Capital One </h4>
+        <h5> <b> Software Engineering Intern </b> </h5>
+        <h6 class="subtitle"> Jun 2019 - August 2019 | <i>McLean, VA</i> </h6>
+        <div>
+          <p>
+            Over the summer, I worked on Capital One's Continuous Improvement team to build tools to
+            streamline their workflow. As the only software engineer on a team of business coaches, I learned a lot
+            about the business's objectives and inner workings while introducing the team to new technical
+            possibilities.
+          </p>
+          <p>
+            First, I learned about what the team did, observed how they did their work, and discussed with the team to
+            identify where I could help them. A lot of their work involved manual data retrieval, manipulation, and
+            visualization, so I wrote scripts to automate these processes. These scripts save the teams numerous hours
+            every month.
+          </p>
+          <p>
+            To allow lay users to interact with these scripts, I designed and developed a web interface so that the team
+            could more easily use them.
+          </p>
+          <p>
+            I also helped the team connect to previously inaccessible data sources and wrote queries to calculate new
+            useful metrics, enabling the team to analyze the organization's performance in a new light.
+          </p>
+        </div>
+      </div>
+      <div class="col l4 hide-on-med-and-down sr-left">
+        <img src="./img/capitalone-logo.png" style="width:100%; border-radius: 12%;" class="enlarge" />
+      </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="row vcenter">
+      <div class="col l4 hide-on-med-and-down sr-right">
+        <img src="./img/clearwater-logo.jpg" style="width:100%; border-radius: 12%;" class="enlarge" />
+      </div>
+      <div class="col l8 m12 sr-left padded">
+        <h4> Clearwater Analytics </h4>
+        <h5> <b> Software Development Intern </b> </h5>
+        <h6 class="subtitle"> May 2018 - August 2018 | <i>Boise, ID</i> </h6>
+        <div>
+          <p>
+            Last year, I worked on an agile development team with other interns to
+            develop an internal full-stack web application for processing financial data.
+          </p>
+          <p>
+            I helped in designing and implementing tables and stored procedures in SQL and connecting
+            the database to a Java backend. Then, I worked on implementing ETLs to clean
+            and transform data, before creating RESTful web services to send data to the front-end.
+            Using the React framework, I helped build the user interface for users
+            to perform CRUD operations, and added functionalities like authentication.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="row vcenter">
+      <div class="col l8 m12 sr-left padded">
+        <h4> Carnegie Mellon University </h4>
+        <h5> <b> Teaching Assistant </b> </h5>
+        <h6 class="subtitle"> January 2017 - May 2018 | <i>Pittsburgh, PA</i> </h6>
+        <div>
+          <p>
+            During my studies at Carnegie Mellon, I've been a teaching assistant for two courses:
+            <i>Matrix Algebra with Applications</i> and <i>Methods for Statistical Data Science</i>,
+            helping with grading and holding office hours.
+          </p>
+          <p>
+            In Matrix Algebra, I taught a weekly recitation that was mostly focused on how to
+            solve computational problems and write simple proofs. Topics included vector spaces,
+            orthogonality, real and complex eigenvalues and eigenvectors, linear transformations,
+            the invertible matrix theorem, and more.
+          </p>
+          <p>
+            In Methods for Statistical Data Science, I assisted during lab sessions, aiding students in
+            using R to visualize and model data, and answering questions about statistical techniques
+            such as analysis of variance and simple, multiple, and logistic regression.
+          </p>
+        </div>
+      </div>
+      <div class="col l4 hide-on-med-and-down sr-right">
+        <img src="./img/cmu-logo.jpg" style="width:100%" class="circle enlarge" />
+      </div>
+    </div>
+
+    <br>
+    <hr>
+    <br>
+
+    <div class="row vcenter">
+      <div class="col l4 hide-on-med-and-down sr-left">
+        <img src="./img/dragon-construction.jpg" style="width:100%; border-radius: 12%" class="enlarge" />
+      </div>
+      <div class="col l8 m12 sr-right padded">
+        <h4> Dragon Construction, Inc. </h4>
+        <h5> <b> Construction Laborer </b> </h5>
+        <h6 class="subtitle"> May 2016 - Present | <i> Washington, DC Area </i> </h6>
+        <div>
+          <p>
+            Whenever I'm not at school, I'm usually working with my dad, who is a contracter.
+            I'd been tagging along to his job sites since I was just a kid, but only recently
+            have I developed the gains<sup>1</sup> (and brains<sup>2</sup>) to actually help
+            him in home renovations and repairs.
+          </p>
+          <p>
+            Mostly, I paint walls, assemble things that involve screws, and haul a lot of heavy stuff around.
+            I've also been learning about carpentry, electrical wiring, plumbing, and, of course, which aisle things
+            are located at the local Home Depot.
+          </p>
+          <p class="footnote">
+            <sup>1</sup> The existence of the gains are debatable, but I like to believe I have them.
+          </p>
+          <p class="footnote">
+            <sup>2</sup> Also debatable.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="skills">
+    <div class="parallax-container thin">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="section-title-container">
+            <div class="section-title light">SKILLS</div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="img/piano.jpg"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="row vcenter">
+      <div class="col l6 m4 hide-on-small-only skill-type left padded">
+        Programming Languages
+      </div>
+      <div class="col l6 m8 s12 skill-list right sr-left">
         <ul>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
-            <li>JavaScript</li>
-            <li>Python</li>
-            <li>Ruby</li>
-            <li>Go</li>
-            <li>Node.js</li>
-            <li>AngularJs</li>
-            <li>React</li>
-            <li>Elixir</li>
-            <li>Java</li>
-            <li>C</li>
-            <li>C#</li>
-            <li>C++</li>
-            <li>Ruby on Rails</li>
+          <li style="width: 100%;"> Python </li>
+          <li style="width: 100%;"> Java </li>
+          <li style="width: 80%;"> Ruby </li>
+          <li style="width: 70%;"> C </li>
+          <li style="width: 60%;"> R </li>
+          <li style="width: 50%;"> MATLAB </li>
         </ul>
+      </div>
     </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form method="POST" action="https://formspree.io/email@email.com">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        </div>
-        <!-- End #contact-form -->
+    <br>
+    <div class="row vcenter">
+      <div class="col l6 m8 s12 skill-list left sr-right">
+        <ul class="right-aligned-list">
+          <li style="width: 100%;"> HTML </li>
+          <li style="width: 100%;"> CSS </li>
+          <li style="width: 100%;">
+            Javascript<br>
+            Typescript
+          </li>
+          <li style="width: 100%;"> React </li>
+          <li style="width: 90%;"> Redux </li>
+          <li style="width: 80%;"> Rails </li>
+        </ul>
+      </div>
+      <div class="col l6 m4 hide-on-small-only skill-type padded">
+        Web Development
+      </div>
     </div>
-    <!-- End #contact -->
+    <br>
+    <div class="row vcenter">
+      <div class="col l6 m4 hide-on-small-only skill-type left padded">
+        Databases
+      </div>
+      <div class="col l6 m8 s12 skill-list right sr-left">
+        <ul>
+          <li> SQL </li>
+          <li style="width: 90%;"> MongoDB </li>
+          <li style="width: 50%;"> Redis </li>
+        </ul>
+      </div>
+    </div>
+    <br>
+    <div class="row vcenter">
+      <div class="col l6 m8 s12 skill-list left sr-right">
+        <ul class="right-aligned-list">
+          <li style="width: 100%;"> InDesign </li>
+          <li style="width: 100%;"> Excel </li>
+          <li style="width: 90%;"> Minitab </li>
+          <li style="width: 70%;"> Latex </li>
+        </ul>
+      </div>
+      <div class="col l6 m4 hide-on-small-only skill-type padded">
+        Miscellaneous
+      </div>
+    </div>
+  </div>
 
-    <footer>
+  <div class="row" id="projects">
+    <div class="parallax-container thin">
+      <div class="section no-pad-bot">
         <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2020 YOUR NAME
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        <li>
-                            <a href="https://github.com/" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://stackoverflow.com/" target="_blank"><i class="fa fa-stack-overflow" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://linkedin.com/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://twitter.com/" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://plus.google.com/" target="_blank"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+          <div class="section-title-container">
+            <div class="section-title light">PROJECTS</div>
+          </div>
         </div>
-    </footer>
-    <!-- End footer -->
+      </div>
+      <div class="parallax"><img src="img/typing.jpg"></div>
+    </div>
+  </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
+  <div class="section">
+    <div class="row">
+      <div class="col l6 m12 sr-right padded-right">
+        <div class="center">
+          <a href="https://github.com/wiyu98/Engee" target="_blank">
+            <img src="./img/engee.jpg" style="width:100%; cursor: pointer;" class="enlarge" />
+          </a>
+          <a href="https://github.com/wiyu98/Engee" target="_blank">
+            <h4>engee</h4>
+          </a>
+          <h6 class="subtitle"> February, 2018 | <i>TartanHacks 2018</i> </h6>
+        </div>
+        <div>
+          <p>
+            Engee is a simple machine learning sandbox web application.
+            With an easy-to-use interface that guides the user through choosing the right machine
+            learning model, engee was designed to enable non-programmers to get their feet wet
+            in machine learning.
+          </p>
+          <p>
+            Users can upload a dataset and choose the features and techniques they would
+            like to use, and engee will return several metrics, output the code
+            that was used to run the machine learning, and allow users to make predictions.
+          </p>
+        </div>
+      </div>
+      <div class="col l6 m12 sr-left padded-right">
+        <div class="center">
+          <a href="https://github.com/wiyu98/Schedulize" target="_blank">
+            <img src="./img/schedulize.jpg" style="width:100%; cursor: pointer;" class="enlarge" />
+          </a>
+          <a href="https://github.com/wiyu98/Schedulize" target="_blank">
+            <h4>Schedulize</h4>
+          </a>
+          <h6 class="subtitle"> September 2017 </h6>
+          <h6><b> Best Design </b> at <i>HackCMU 2017</i> </h6>
+        </div>
+        <div>
+          <p>
+            Using a recommendation system, latent semantic analysis, and decision trees,
+            Schedulize finds the right courses for each CMU student based on the
+            students' current schedules, past academic record, and their preferences.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row" id="portfolio">
+    <div class="parallax-container thin">
+      <div class="section no-pad-bot">
+        <div class="container">
+          <div class="section-title-container">
+            <div class="section-title light">PORTFOLIO</div>
+          </div>
+        </div>
+      </div>
+      <div class="parallax"><img src="img/bokeh.jpg"></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="row centered">
+      <a href="portfolio/design.html">
+        <div class="col l4 m4">
+          <div class="image-container">
+            <img src="img/design.jpg" style="width: 100%;" />
+            <h4 class="image-text">DESIGN</h4>
+          </div>
+        </div>
+      </a>
+      <a href="portfolio/artwork.html">
+        <div class="col l4 m4">
+          <div class="image-container">
+            <img src="img/art.jpg" style="width: 100%;" />
+            <h4 class="image-text">ARTWORK</h4>
+          </div>
+        </div>
+      </a>
+      <a href="portfolio/photography.html">
+        <div class="col l4 m4">
+          <div class="image-container">
+            <img src="img/photography.jpg" style="width: 100%;" />
+            <h4 class="image-text">PHOTO-<br>GRAPHY</h4>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div id="footer" class="row center sr-bottom">
+    <div class="container vcenter">
+      <div class="hide-on-med-and-down" style="float: left">
+        <a href="#banner" class="icon-link fa fa-arrow-up fa-3x"></a>
+        <a href="#banner" class="icon-link fa fa-arrow-up fa-3x" style="visibility:hidden;"></a>
+        <a href="#banner" class="icon-link fa fa-arrow-up fa-3x" style="visibility:hidden;"></a>
+      </div>
+      <a href="https://wiyu98.github.io"><img src="./img/logo-animated.svg" style="height: 75px;"
+          class="enlarge fast" /></a>
+      <div class="hide-on-med-and-down" style="float: right">
+        <a href="https://www.linkedin.com/in/wilson-yu-20253a131/" target="_blank"
+          class="icon-link fa fa-linkedin-square fa-3x"></a>
+        <a href="./files/wilson-yu-resume.pdf" target="_blank" class="icon-link fa fa-file-pdf-o fa-3x"></a>
+        <a href="https://github.com/wiyu98/" target="_blank" class="icon-link fa fa-github-square fa-3x"></a>
+      </div>
+    </div>
+    <div class="row">
+      <br>
+      <a href="mailto:yu.wilson.b@gmail.com">yu.wilson.b@gmail.com</a> | <a href="tel:+1-240-543-9080">240-543-9080</a>
+      <br>
+      <h6> Wilson Yu <i class="fa fa-copyright" aria-hidden="true"></i> 2018</h6>
+    </div>
+  </div>
+
 </body>
 
 </html>
